@@ -1,0 +1,36 @@
+{
+  "name": "CodeCounter",
+  "version": "0.0.1",
+  "description": "Small Node.js project to count lines of code in a project directory",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ddikman/CodeCounter.git"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "codecounter": "counter.js"
+  },
+  "keywords": [
+    "code",
+    "count",
+    "coverage"
+  ],
+  "author": "David Dikman",
+  "license": "Apachee 2.0",
+  "bugs": {
+    "url": "https://github.com/ddikman/CodeCounter/issues"
+  },
+  "homepage": "https://github.com/ddikman/CodeCounter",
+  "dependencies": {
+    "command-line-args": "^1.0.2",
+    "node-dir": "^0.1.10",
+    "npmlog": "^1.2.1",
+    "promise": "^7.0.4"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.3"
+  }
+}
