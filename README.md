@@ -3,7 +3,7 @@ CodeCounter is a small application written to enable counting code in various pr
 
 [<img src="https://travis-ci.org/ddikman/CodeCounter.svg?branch=master">](https://travis-ci.org/ddikman/CodeCounter.svg?branch=master)
 
-# Prupose
+# Purpose
 The benefit of knowing how much code you've got may seem small but as all metrics it can provide an additional aspect in how you view your project.
 
 For my sake, I meant to use it a gauge to compare relative project size. I had a gut feeling of some parts being larger than others and to that purpose I wanted to
