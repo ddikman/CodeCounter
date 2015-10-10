@@ -1,6 +1,6 @@
 {
   "name": "CodeCounter",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Small Node.js project to count lines of code in a project directory",
   "scripts": {
     "test": "npm test"
