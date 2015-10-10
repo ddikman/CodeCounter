@@ -38,18 +38,24 @@ var countLinesOfFilesInFolder = function(folder, options) {
 
 	return new Promise(function(resolve, reject){
 
-		var totalLines = 0;
 		dirs.readFiles(folder, options)
 			.then(function(files){
 
 				try{
+
 					log.verbose(logTag, "Found a total of %s files in %s", files.length, folder);
+					var result = {
+						files: [],
+						totalLines: 0
+					};
 					files.forEach(function(file){
-						log.verbose(logTag, 'Counting lines in %s', file.name);
-						totalLines += counter.linesInString(file.contents);
+						var linesInFile = counter.linesInString(file.contents);
+						result.files.push({ path: file.name, lines: linesInFile });
+						result.totalLines += linesInFile;
+						log.verbose(logTag, 'Lines in %s: %s', file.name, linesInFile);
 					}.bind(this));
 
-					resolve(totalLines);
+					resolve(result);
 				}
 				catch(e)
 				{
@@ -62,8 +68,9 @@ var countLinesOfFilesInFolder = function(folder, options) {
 };
 
 countLinesOfFilesInFolder(options.path, searchOptions)
-	.then(function(totalLines){
-		console.log("Total lines: %s", totalLines);
+	.then(function(result){
+		log.info(logTag, "Total lines: %s", result.totalLines);
+		console.log(JSON.stringify(result, null, 2));
 		process.exit(0);
 	}, function(err){
 		if(err.stack)

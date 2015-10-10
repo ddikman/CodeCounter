@@ -10,14 +10,14 @@ var validate = function(args)
 };
 
 var commandLineArgDefinition = commandLineArgs([
-	{ name: "total", alias: 't', type: Boolean, defaultValue: false },
-	{ name: "help", alias: 't', type: Boolean },
-	{ name: 'wildcard', alias: 'w', type: String, defaultValue: '*.*' },
-	{ name: 'regex', alias: 'r', type: String },
-	{ name: 'encoding', type: String, defaultValue: 'utf8' },
-	{ name: 'verbose', alias: 'v', type: Boolean },
-	{ name: 'exclude', alias: 'e', type: String, multiple: true, defaultValue: [], description: 'A list of folders to exclude from the searh.' },
-	{ name: "path", alias: 'p', type: String, defaultValue: './', defaultOption: true }
+	{ name: "total", alias: 't', type: Boolean, defaultValue: false, description: 'If set the total line count of all files is summed and output.' },
+	{ name: "help", alias: 't', type: Boolean, description: 'Displays this help message.' },
+	{ name: 'wildcard', alias: 'w', type: String, defaultValue: '*.*', description: 'Wildcard expression to match files to include in the count with (only if regex is not used)' },
+	{ name: 'regex', alias: 'r', type: String, description: 'A regular expression to match all filenames with, successful matches will be counted.' },
+	{ name: 'encoding', type: String, defaultValue: 'utf8', description: 'Encoding to use when reading files, defaults to utf8.' },
+	{ name: 'verbose', alias: 'v', type: Boolean, description: 'If set, prints log messages and formatted output.' },
+	{ name: 'exclude', alias: 'e', type: String, multiple: true, defaultValue: [], description: 'A list of folders to exclude from the search.' },
+	{ name: "path", alias: 'p', type: String, defaultValue: './', defaultOption: true, description: 'Relative or absolute path to a directory to count files under (recursive).' }
 ]);
 
 var usage = commandLineArgDefinition.getUsage({
