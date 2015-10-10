@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 var Wildcard = require('./wildcard');
 var dirs = require('./directories');
 var options = require("./options")
@@ -6,10 +8,10 @@ var counter = require('./count.js');
 var logTag = "counter.js";
 
 if(options.displayHelp){
-	
+
 	console.log(options.usage);
-	options.errors.forEach(function(err){ 
-		console.log(warning); 
+	options.errors.forEach(function(err){
+		console.log(warning);
 	});
 	process.exit(1);
 }
