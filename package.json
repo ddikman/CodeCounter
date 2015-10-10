@@ -1,6 +1,6 @@
 {
   "name": "CodeCounter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Small Node.js project to count lines of code in a project directory",
   "scripts": {
     "test": "npm test"
@@ -11,7 +11,7 @@
   },
   "preferGlobal": true,
   "bin": {
-    "codecounter": "cli.js"
+    "codecounter": "./cli.js"
   },
   "keywords": [
     "code",
