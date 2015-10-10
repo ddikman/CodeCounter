@@ -10,7 +10,7 @@ graph the difference to provide insight about the actual facts.
 CodeCounter is meant to be installed globally and accessed as a command line tool.
 
 ``` shell
-npm install git+https://github.com/ddikman/CodeCounter.git
+npm install -g git+https://github.com/ddikman/CodeCounter.git
 codecounter -p C:\Code\CodeCounter\ -e node_modules -w *.js
 ```
 

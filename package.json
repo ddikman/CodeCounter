@@ -11,7 +11,7 @@
   },
   "preferGlobal": true,
   "bin": {
-    "codecounter": "counter.js"
+    "codecounter": "cli.js"
   },
   "keywords": [
     "code",
